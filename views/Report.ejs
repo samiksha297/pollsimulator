@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Voting Summary</title>
+</head>
+
+<body>
+    <div class="container card shadow-lg p-3 mb-5 bg-white rounded" style="width:40%; margin-top:10px;">
+      <h1><center><u>Voting Summary</u></center></h1>
+    <table class='table table-responsive'>
+        <thead>
+            <tr>
+                <th>Names</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% result.forEach(data =>{ %>
+                <tr>
+                    <td>
+                        <%= data.name %>
+                    </td>
+                    <td>
+                        <%= data.votes %>
+                    </td>
+                </tr>
+                <% }) %>
+
+        </tbody>
+    </table>
+    <center><a href="/">Home</a></center>
+</body>
+
+</html>
